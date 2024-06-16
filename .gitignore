@@ -1,2 +1,7 @@
 .idea/
+__pycaache__/
+static/
 
+.python-version
+.env
+*.sqlite3
