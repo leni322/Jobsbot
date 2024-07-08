@@ -117,6 +117,6 @@ class HabrPage(Page):
 
 
 if __name__ == '__main__':
-    page = HabrPage(HC_URL)
+    page = HHPage(HH_URL)
     page.parser()
     print(*page.get_list_vacancies(), sep='\n')
