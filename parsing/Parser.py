@@ -6,7 +6,7 @@ import requests
 
 from bs4 import BeautifulSoup
 
-HH_URL = 'https://spb.hh.ru/search/vacancy?L_save_area=true&text=Python&excluded_text=&area=113&area=40&area=16&area=1001&salary=&currency_code=RUR&experience=noExperience&schedule=fullDay&schedule=remote&order_by=relevance&search_period=0&items_on_page=50&hhtmFrom=vacancy_search_filter'
+HH_URL = 'https://spb.hh.ru/search/vacancy?ored_clusters=true&enable_snippets=true&area=2&hhtmFrom=vacancy_search_list&hhtmFromLabel=vacancy_search_line&search_field=name&excluded_text=%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C&text=python'
 # SJ_URL = 'https://spb.superjob.ru/vacancy/search/?keywords=Python'
 HC_URL = 'https://career.habr.com/vacancies?q=python&type=all'
 HEADERS = {
@@ -77,7 +77,7 @@ class Page(ABC):
 class HHJobCard(JobCard):
     title = '[data-qa="serp-item__title"]'
     title_url = '[class="bloko-link"]'
-    city = '[data-qa="vacancy-serp__vacancy-address_narrow"]'
+    city = '[data-qa="vacancy-serp__vacancy-address"]'
 
 
 class HHPage(Page):

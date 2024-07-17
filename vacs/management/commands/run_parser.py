@@ -21,9 +21,15 @@ class Command(BaseCommand):
             )
 
             if vac_obj_created:
-                city_obj, city_obj_created = City.objects.get_or_created(name=city)
+                city_obj, city_obj_created = City.objects.get_or_create(name=city)
 
                 vac.city = city_obj
                 vac.save()
 
-                print(vac, vac_obj_created)
+            print(vac, vac_obj_created)
+
+
+
+
+
+
